@@ -677,113 +677,7 @@ section{
 
 
 
-/* ================= RESPONSIVE ================= */
 
-@media (max-width: 700px) {
-
-    /* NAV */
-    nav {
-        display: none;
-    }
-
-    /* HERO */
-    .hero {
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-        padding-top: 120px;
-        overflow-x: hidden;
-    }
-
-    .hero-texto {
-        width: 100%;
-    }
-
-    .hero h1 {
-        font-size: 2.6rem;
-    }
-
-    /* PROYECTO GRID */
-    .cards-proyecto {
-        grid-template-columns: 1fr;
-    }
-
-    .card-feature {
-        overflow: hidden;
-    }
-
-    /* PREVIEW IMAGES (IMPORTANTE FIX DE TU BUG) */
-    .preview-images {
-        position: static;
-        transform: none !important;
-        opacity: 1 !important;
-        pointer-events: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 15px;
-    }
-
-    .preview-images img {
-        width: 85px;
-        height: 60px;
-    }
-
-    /* TECH GRID */
-    .tech-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* CONTACTO */
-    .contacto-actions {
-        flex-direction: column;
-    }
-
-    .email-box {
-        width: 100%;
-    }
-
-    .email-box input {
-        min-width: 0;
-        width: 100%;
-    }
-
-    /* FLOATING VIDEOS OFF MOBILE */
-    .floating-videos {
-        display: none !important;
-    }
-
-    /* BACKDROP OPTIMIZATION */
-    .navbar,
-    .card-feature,
-    .tech-card,
-    .email-box {
-        backdrop-filter: none !important;
-        -webkit-backdrop-filter: none !important;
-    }
-}
-
-@media (max-width: 700px) {
-
-.modal-prev,
-    .modal-video-prev {
-        left: 10px;
-        right: auto;
-        width: 20px;
-        height: 20px;
-        font-size: 9px;
-    }
-
-    .modal-next,
-    .modal-video-next {
-        right: 10px;
-        left: auto;
-        width: 20px;
-        height: 20px;
-        font-size: 9px;
-    }
-}
 
 .whatsapp-link img {
 
@@ -861,14 +755,14 @@ section{
 
     border: 1px solid rgba(255,255,255,0.15);
 
-    width: 10px;
-    height: 10px;
+    width: 60px;
+    height: 60px;
 
     border-radius: 50%;
 
     color: white;
 
-    font-size: 8px;
+    font-size: 20px;
 
     cursor: pointer;
 
@@ -877,6 +771,9 @@ section{
     transition: 0.3s ease;
 
     z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -1056,8 +953,8 @@ section{
 
     transform: translateY(-50%);
 
-    width: 65px;
-    height: 65px;
+    width: 55px;
+    height: 55px;
 
     border-radius: 50%;
 
@@ -1067,7 +964,7 @@ section{
 
     color: white;
 
-    font-size: 30px;
+    font-size: 20px;
 
     cursor: pointer;
 
@@ -1091,13 +988,13 @@ section{
 
 .modal-video-prev {
 
-    left: 40px;
+    left: 20px;
 }
 
 
 .modal-video-next {
 
-    right: 40px;
+    right: 20px;
 }
 
 /* ================= FLOATING VIDEOS ================= */
@@ -1407,5 +1304,113 @@ section{
     .hero-imagen {
         width: 100%;
         justify-content: center;
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 700px) {
+
+    /* NAV */
+    nav {
+        display: none;
+    }
+
+    /* HERO */
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding-top: 120px;
+        overflow-x: hidden;
+    }
+
+    .hero-texto {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    /* PROYECTO GRID */
+    .cards-proyecto {
+        grid-template-columns: 1fr;
+    }
+
+    .card-feature {
+        overflow: hidden;
+    }
+
+    /* PREVIEW IMAGES (IMPORTANTE FIX DE TU BUG) */
+    .preview-images {
+        position: static;
+        transform: none !important;
+        opacity: 1 !important;
+        pointer-events: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .preview-images img {
+        width: 85px;
+        height: 60px;
+    }
+
+    /* TECH GRID */
+    .tech-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* CONTACTO */
+    .contacto-actions {
+        flex-direction: column;
+    }
+
+    .email-box {
+        width: 100%;
+    }
+
+    .email-box input {
+        min-width: 0;
+        width: 100%;
+    }
+
+    /* FLOATING VIDEOS OFF MOBILE */
+    .floating-videos {
+        display: none !important;
+    }
+
+    /* BACKDROP OPTIMIZATION */
+    .navbar,
+    .card-feature,
+    .tech-card,
+    .email-box {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+}
+
+@media (max-width: 700px) {
+
+.modal-prev,
+    .modal-video-prev {
+        left: 10px;
+        right: auto;
+        width: 20px;
+        height: 20px;
+        font-size: 9px;
+    }
+
+    .modal-next,
+    .modal-video-next {
+        right: 10px;
+        left: auto;
+        width: 20px;
+        height: 20px;
+        font-size: 9px;
     }
 }
