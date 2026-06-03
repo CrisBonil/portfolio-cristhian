@@ -692,6 +692,7 @@ section{
         align-items: center;
         gap: 25px;
         padding-top: 120px;
+        overflow-x: hidden;
     }
 
     .hero-texto {
@@ -760,6 +761,33 @@ section{
     .email-box {
         backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .modal-prev,
+    .modal-next,
+    .modal-video-prev,
+    .modal-video-next {
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 20px;
+
+        left: 10px;
+        right: 10px;
+    }
+
+    .modal-next,
+    .modal-video-next {
+        right: 10px;
+    }
+
+    .modal-prev,
+    .modal-video-prev {
+        left: 10px;
     }
 }
 
@@ -1260,18 +1288,6 @@ section{
 }
 
 
-@media (max-width: 1100px) {
-
-    .hero {
-        flex-direction: column;
-    }
-
-    .hero-imagen {
-        position: relative;
-        top: auto;
-    }
-}
-
 
 @media (max-width: 1100px) {
 
@@ -1364,5 +1380,38 @@ section{
     .email-box {
         backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .mockup-top {
+        flex-direction: row;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .mini-video {
+        width: 60px;
+        height: 40px;
+    }
+
+    .grafica {
+        height: 220px;
+    }
+
+    #videoPrincipal {
+        height: 220px;
+    }
+
+    .mockup-card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero-imagen {
+        width: 100%;
+        justify-content: center;
     }
 }
