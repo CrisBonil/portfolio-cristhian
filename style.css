@@ -1299,12 +1299,17 @@ section{
 
 .image-modal,
 .video-modal {
+    position: fixed;
+    inset: 0;
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
+    transition: 0.3s ease;
 }
 
 .image-modal.active,
 .video-modal.active {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
 }
