@@ -679,114 +679,88 @@ section{
 
 /* ================= RESPONSIVE ================= */
 
-@media(max-width:1100px){
-
-    .hero{
-
-        flex-direction:column;
-    }
-
-    .hero h1{
-
-        font-size:4rem;
-    }
-}
-
-
-@media(max-width:700px){
-
-    nav{
-
-        display:none;
-    }
-
-    .hero h1{
-
-        font-size:3rem;
-    }
-
-    .titulo-seccion h2{
-
-        font-size:2.2rem;
-    }
-
-    .hero{
-
-        padding-top:120px;
-    }
-}
-
-
-@media(max-width:1100px){
-
-    .hero-imagen {
-
-        position: relative;
-
-        top: auto;
-    }
-
-}
-
-
 @media (max-width: 700px) {
 
-    .floating-videos {
-        position: fixed;
-        top: auto;
-        bottom: 15px;
-        right: 10px;
+    /* NAV */
+    nav {
+        display: none;
+    }
 
-        display: flex;
-        flex-direction: row;
+    /* HERO */
+    .hero {
+        flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 25px;
+        padding-top: 120px;
+    }
 
-        padding: 8px;
+    .hero-texto {
+        width: 100%;
+    }
 
-        width: auto;
-        max-width: calc(100vw - 20px);
+    .hero h1 {
+        font-size: 2.6rem;
+    }
 
-        background: rgba(255,255,255,0.12);
-                backdrop-filter: none !important;
-        -webkit-backdrop-filter: none !important;
+    /* PROYECTO GRID */
+    .cards-proyecto {
+        grid-template-columns: 1fr;
+    }
 
-        border-radius: 22px;
+    .card-feature {
+        overflow: hidden;
+    }
 
-        opacity: 1 !important;
-        pointer-events: auto !important;
+    /* PREVIEW IMAGES (IMPORTANTE FIX DE TU BUG) */
+    .preview-images {
+        position: static;
         transform: none !important;
-
-        z-index: 9999;
+        opacity: 1 !important;
+        pointer-events: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 15px;
     }
 
-    .floating-video {
-        width: 70px;
-        height: 45px;
-        object-fit: cover;
-        display: block !important;
+    .preview-images img {
+        width: 85px;
+        height: 60px;
     }
-}
 
-@media(max-width:700px){
+    /* TECH GRID */
+    .tech-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
+    /* CONTACTO */
     .contacto-actions {
-
         flex-direction: column;
     }
 
     .email-box {
-
         width: 100%;
     }
 
     .email-box input {
-
         min-width: 0;
-
         width: 100%;
     }
 
+    /* FLOATING VIDEOS OFF MOBILE */
+    .floating-videos {
+        display: none !important;
+    }
+
+    /* BACKDROP OPTIMIZATION */
+    .navbar,
+    .card-feature,
+    .tech-card,
+    .email-box {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
 }
 
 .whatsapp-link img {
@@ -1285,38 +1259,110 @@ section{
     font-size: 0.95rem;
 }
 
-@media (max-width: 700px) {
 
-    .navbar,
-    .card-feature,
-    .tech-card,
-    .email-box,
-    .floating-videos {
-        backdrop-filter: none !important;
-        -webkit-backdrop-filter: none !important;
+@media (max-width: 1100px) {
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-imagen {
+        position: relative;
+        top: auto;
     }
 }
 
-.image-modal,
-.video-modal {
-    position: fixed;
-    inset: 0;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: 0.3s ease;
-}
 
-.image-modal.active,
-.video-modal.active {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+@media (max-width: 1100px) {
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-imagen {
+        position: relative;
+        top: auto;
+    }
 }
 
 @media (max-width: 700px) {
 
+    /* NAV */
+    nav {
+        display: none;
+    }
+
+    /* HERO */
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding-top: 120px;
+    }
+
+    .hero-texto {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    /* PROYECTOS */
+    .cards-proyecto {
+        grid-template-columns: 1fr;
+    }
+
+    .card-feature {
+        overflow: hidden;
+    }
+
+    /* PREVIEW IMAGES */
+    .preview-images {
+        position: static;
+        transform: none !important;
+        opacity: 1 !important;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .preview-images img {
+        width: 85px;
+        height: 60px;
+    }
+
+    /* TECNOLOGÍAS */
+    .tech-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* CONTACTO */
+    .contacto-actions {
+        flex-direction: column;
+    }
+
+    .email-box {
+        width: 100%;
+    }
+
+    .email-box input {
+        min-width: 0;
+        width: 100%;
+    }
+
+    /* FLOATING VIDEOS */
     .floating-videos {
         display: none !important;
+    }
+
+    /* BACKDROP FIX GLOBAL */
+    .navbar,
+    .card-feature,
+    .tech-card,
+    .email-box {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
     }
 }
