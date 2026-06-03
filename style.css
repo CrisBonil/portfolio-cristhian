@@ -770,18 +770,18 @@ section{
     .modal-video-prev {
         left: 10px;
         right: auto;
-        width: 42px;
-        height: 42px;
-        font-size: 18px;
+        width: 20px;
+        height: 20px;
+        font-size: 9px;
     }
 
     .modal-next,
     .modal-video-next {
         right: 10px;
         left: auto;
-        width: 42px;
-        height: 42px;
-        font-size: 18px;
+        width: 20px;
+        height: 20px;
+        font-size: 9px;
     }
 }
 
@@ -861,14 +861,14 @@ section{
 
     border: 1px solid rgba(255,255,255,0.15);
 
-    width: 60px;
-    height: 60px;
+    width: 10px;
+    height: 10px;
 
     border-radius: 50%;
 
     color: white;
 
-    font-size: 30px;
+    font-size: 8px;
 
     cursor: pointer;
 
