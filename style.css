@@ -1,8 +1,8 @@
 
 :root{
 
-    --fondo: #ffffff;
-    --fondo-secundario: #f5f7fa;
+    --fondo: #eef6ff;
+    --fondo-secundario: #f4faff;
 
     --texto: #0f172a;
     --texto-suave: #475569;
@@ -193,7 +193,7 @@ nav a:hover{
 
     align-items: center;
 
-    flex-wrap: wrap;
+    flex-wrap: flex-start;
 }
 
 
@@ -205,7 +205,8 @@ nav a:hover{
 
 
 .btn-principal,
-.btn-secundario{
+.btn-secundario,
+.btn-cv{
 
     border:none;
 
@@ -529,7 +530,7 @@ section{
 
 .card-feature.active .preview-images {
 
-    opacity: 1;
+    opacity: 1 !important;
 
     pointer-events: auto;
 
@@ -622,7 +623,7 @@ section{
 
     font-size: 0.85rem;
 
-    color: #b5ff48;
+    color:  #1d2dbb;
 
     opacity: 0;
 
@@ -692,6 +693,13 @@ section{
 .hero-botones a {
 
     text-decoration: none;
+        display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    line-height: 1;
 }
 
 .image-modal {
@@ -1083,6 +1091,45 @@ section{
     transition: 0.3s ease;
 }
 
+/* ================= AUTO LIGHT EFFECT ================= */
+
+
+/* REFLEJO MOVIÉNDOSE */
+
+.card-feature::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -120%;
+    left: -40%;
+
+    width: 70px;
+    height: 320%;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,0.08),
+            rgba(255,255,255,0.45),
+            rgba(255,255,255,0.08),
+            transparent
+        );
+
+    transform: rotate(25deg);
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    z-index: 6;
+}
+.card-feature.active::before {
+
+    animation: shineMove 2.8s ease;
+}
 /* ================= CONTACTO ACTIONS ================= */
 
 .contacto-actions {
@@ -1413,4 +1460,395 @@ section{
         height: 20px;
         font-size: 9px;
     }
+}
+
+/* SOLO EN ESCRITORIO */
+
+@media (min-width: 701px) {
+
+    .card-feature.auto-shine::before {
+
+        animation: shineMove 2.8s ease;
+    }
+}
+
+
+/* ANIMACIÓN */
+
+@keyframes shineMove {
+
+    0% {
+
+        left: -40%;
+        opacity: 0;
+    }
+
+    15% {
+
+        opacity: 1;
+    }
+
+    50% {
+
+        opacity: 0.9;
+    }
+
+    100% {
+
+        left: 140%;
+        opacity: 0;
+    }
+}
+
+/* ================= EDUCACIÓN ================= */
+
+.educacion {
+
+    padding-top: 20px;
+}
+
+.education-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    background: rgba(255,255,255,0.7);
+
+    border: 1px solid rgba(255,255,255,0.4);
+
+    backdrop-filter: blur(14px);
+
+    border-radius: 28px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.08);
+
+    transition: 0.35s ease;
+}
+
+.education-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 30px rgba(56,189,248,0.15),
+        0 20px 50px rgba(0,0,0,0.12);
+}
+
+.education-icon {
+
+    width: 90px;
+    height: 90px;
+
+    min-width: 90px;
+
+    border-radius: 24px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2.4rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(56,189,248,0.18),
+            rgba(134,239,172,0.18)
+        );
+}
+
+.education-content h3 {
+
+    font-size: 1.5rem;
+
+    margin-bottom: 8px;
+}
+
+.education-place {
+
+    color: var(--azul);
+
+    font-weight: 600;
+
+    margin-bottom: 14px;
+}
+
+.education-description {
+
+    color: var(--texto-suave);
+
+    line-height: 1.7;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .education-card {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 28px;
+    }
+
+    .education-icon {
+
+        width: 75px;
+        height: 75px;
+
+        min-width: 75px;
+
+        font-size: 2rem;
+    }
+
+    .education-content h3 {
+
+        font-size: 1.2rem;
+    }
+}
+
+/* ================= BOTÓN CV ================= */
+
+.btn-cv {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+    padding: 15px 24px;
+
+    border-radius: 18px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-weight: 600;
+
+    background:
+        linear-gradient(
+            135deg,
+            #38bdf8,
+            #0ea5e9
+        );
+
+    box-shadow:
+        0 10px 30px rgba(56,189,248,0.25);
+
+    transition: 0.3s ease;
+}
+
+.btn-cv {
+
+    border: none;
+
+    padding: 16px 28px;
+
+    border-radius: 14px;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    background: linear-gradient(
+        135deg,
+        var(--azul),
+        var(--verde)
+    );
+
+    color: white;
+
+    box-shadow: var(--sombra);
+}
+
+.btn-cv:hover {
+
+    transform: translateY(-3px);
+}
+
+.hero-botones .btn-principal,
+.hero-botones .btn-secundario,
+.hero-botones .btn-cv,
+.hero-botones  {
+
+    padding: 14px 20px;
+    align-items: baseline;
+}
+
+.toggle-idioma {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    color: white;
+
+background: linear-gradient(
+    135deg,
+    #2563eb,
+    #86efac
+);
+
+    box-shadow:
+        0 10px 25px rgba(56,189,248,0.25);
+
+    transition: 0.3s ease;
+}
+
+
+/* REFLEJO */
+
+.toggle-idioma::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -120%;
+    left: -40%;
+
+    width: 60px;
+    height: 320%;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,0.08),
+            rgba(255,255,255,0.5),
+            rgba(255,255,255,0.08),
+            transparent
+        );
+
+    transform: rotate(25deg);
+
+    animation: shineToggle 2s linear infinite;
+
+    pointer-events: none;
+}
+
+
+/* HOVER */
+
+.toggle-idioma:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 25px rgba(145,255,0,0.25),
+        0 10px 30px rgba(0,0,0,0.18);
+}
+
+
+/* ANIMACIÓN */
+
+@keyframes shineToggle {
+
+    0% {
+
+        left: -40%;
+        opacity: 0;
+    }
+
+    15% {
+
+        opacity: 1;
+    }
+
+    50% {
+
+        opacity: 0.9;
+    }
+
+    100% {
+
+        left: 140%;
+        opacity: 0;
+    }
+}
+
+.hero-botones {
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+
+/* BOTONES */
+
+.btn-principal,
+.btn-secundario,
+.btn-cv,
+.toggle-idioma {
+
+    width: 100%;
+
+    max-width: 260px;
+
+    justify-content: center;
+}
+
+
+/* TOGGLE */
+
+    .navbar {
+
+        justify-content: space-between;
+
+        padding: 18px 6%;
+    }
+
+.toggle-idioma {
+
+    min-width: 58px;
+
+    height: 42px;
+
+    padding: 0 18px;
+
+    font-size: 0.95rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    line-height: 1;
 }

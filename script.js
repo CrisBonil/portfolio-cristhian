@@ -390,3 +390,103 @@ copyEmailBtn.addEventListener("click", async () => {
     }
 
 });
+
+/* ================= AUTO DEMO CARDS ================= */
+
+
+function activarDemoCard(card) {
+
+    if (window.innerWidth <= 700) return;
+
+    card.classList.add("active");
+
+    setTimeout(() => {
+
+        card.classList.remove("active");
+
+    }, 2200);
+}
+
+
+/* ================= CICLO AUTOMÁTICO ================= */
+
+let indexCard = 0;
+
+let intervaloCards;
+
+
+/* FUNCIÓN PARA INICIAR */
+
+function iniciarDemoCards() {
+
+    intervaloCards = setInterval(() => {
+
+        activarDemoCard(cards[indexCard]);
+
+        indexCard++;
+
+        if (indexCard >= cards.length) {
+
+            indexCard = 0;
+        }
+
+    }, 3000);
+}
+
+
+/* INICIAR AL CARGAR */
+
+iniciarDemoCards();
+
+
+/* ================= PAUSAR EN HOVER ================= */
+
+cards.forEach(card => {
+
+    card.addEventListener("mouseenter", () => {
+
+        clearInterval(intervaloCards);
+
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+        iniciarDemoCards();
+
+    });
+
+});
+
+const toggleIdioma = document.getElementById("toggleIdioma");
+
+let idiomaActual = "es";
+
+toggleIdioma.addEventListener("click", () => {
+
+    const elementos = document.querySelectorAll("[data-es]");
+
+    if (idiomaActual === "es") {
+
+        elementos.forEach(el => {
+
+            el.textContent = el.dataset.en;
+
+        });
+
+        idiomaActual = "English";
+
+        toggleIdioma.textContent = "Español";
+
+    } else {
+
+        elementos.forEach(el => {
+
+            el.textContent = el.dataset.es;
+
+        });
+
+        idiomaActual = "es";
+
+        toggleIdioma.textContent = "English";
+    }
+});

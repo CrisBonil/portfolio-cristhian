@@ -23,12 +23,16 @@
         </div>
 
         <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre-mi">Sobre mí</a>
-            <a href="#proyecto">Proyecto</a>
-            <a href="#tecnologias">Tecnologías</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a>
+            <a href="#sobre-mi" data-es="Sobre mí" data-en="About me">Sobre mí</a>
+            <a href="#proyecto" data-es="Proyecto" data-en="Project">Proyecto</a>
+            <a href="#tecnologias" data-es="Tecnologías" data-en="Technologies">Tecnologías</a>
+            <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
         </nav>
+
+                    <button id="toggleIdioma" class="toggle-idioma">
+                        English
+                    </button>
 
     </header>
 
@@ -47,17 +51,23 @@
                 Cristhian <span>Bonilla</span>
             </h1>
 
-            <p>
-                Desarrollador en formación enfocado en construir
-                soluciones web modernas, funcionales y visualmente
-                limpias orientadas a gestión empresarial.
-            </p>
+<p data-es="Desarrollador en formación enfocado en construir soluciones web modernas, funcionales y visualmente limpias orientadas a resolver necesidades reales." data-en="Software developer in training focused on building modern, functional, and visually polished web solutions designed to solve real-world needs.">
+Desarrollador en formación enfocado en construir soluciones web modernas, funcionales y visualmente limpias orientadas a resolver necesidades reales.
+</p>
 
+<p data-es="Actualmente continúo fortaleciendo habilidades en <strong>frontend</strong>, experiencia visual e <strong>inglés técnico</strong> orientado a entornos profesionales." data-en="Currently strengthening my skills in <strong>frontend development</strong>, visual experience, and professional <strong>technical English</strong> for collaborative work environments.">
+Actualmente continúo fortaleciendo habilidades en <strong>frontend</strong>, experiencia visual e <strong>inglés técnico</strong> orientado a entornos profesionales.
+</p>
+
+<p data-es="Disfruto construir <strong>experiencias web</strong> que se sientan interactivas, intuitivas y bien cuidadas en cada detalle. Gran parte de mi aprendizaje actual está enfocado en proyectos que mezclen diseño, lógica y utilidad real mientras continúo creciendo como desarrollador." data-en="I enjoy creating <strong>web experiences</strong> that feel interactive, intuitive, and carefully crafted in every detail. Much of my current learning is focused on projects that combine design, logic, and real-world usefulness while continuing to grow as a developer.">
+Disfruto construir <strong>experiencias web</strong> que se sientan interactivas, intuitivas y bien cuidadas en cada detalle. Gran parte de mi aprendizaje actual está enfocado en proyectos que mezclen diseño, lógica y utilidad real mientras continúo creciendo como desarrollador.
+</p>
 <div class="hero-botones">
 
     <a
         href="#proyecto"
         class="btn-principal"
+        data-es="Ver Proyecto" data-en="View Project"
     >
         Ver Proyecto
     </a>
@@ -67,6 +77,7 @@
         href="https://github.com/CrisBonil/AgroHelper-Lusitania"
         target="_blank"
         class="btn-secundario github-btn"
+        data-es="Ver GitHub" data-en="View GitHub"
     >
 
         Ver GitHub
@@ -77,8 +88,14 @@
             alt="GitHub"
         >
 
-    </a>
+        <a href="assets/CV-Cristhian-Bonilla.pdf"
+        download
+        class="btn-cv"
+        data-es="Descargar CV ⬇" data-en="Download CV ⬇">
 
+            Descargar CV ⬇
+
+        </a>
 </div>
 
         </div>
@@ -144,7 +161,7 @@
     <section class="proyecto" id="proyecto">
 
         <div class="titulo-seccion">
-            <span>Proyecto Principal</span>
+            <span data-es="Proyecto Principal" data-en="Main Project">Proyecto Principal</span>
             <h2>AgroHelper Lusitania</h2>
         </div>
 
@@ -154,13 +171,14 @@
     <!-- CARD 1 -->
     <div class="card-feature">
 
-        <h3>Gestión de empleados</h3>
+        <h3 data-es="Gestión de empleados" data-en="Employee Management">Gestión de empleados</h3>
 
-        <p>
+        <p data-es="CRUD completo con control de roles,
+            estados y autenticación." data-en="Complete CRUD system with role management, status handling, and authentication.">
             CRUD completo con control de roles,
             estados y autenticación.
         </p>
-            <span class="hint-click">
+            <span class="hint-click" data-es="Click para explorar imágenes" data-en="Click to explore images">
         Click para explorar imágenes
     </span>
         <div class="preview-images">
@@ -176,13 +194,14 @@
     <!-- CARD 2 -->
     <div class="card-feature">
 
-        <h3>Solicitudes de evidencia</h3>
+        <h3 data-es="Solicitudes de evidencia" data-en="Evidence Requests">Solicitudes de evidencia</h3>
 
-        <p>
+        <p data-es="Sistema de notificaciones en tiempo real
+            mediante polling y control de estados." data-en="Real-time notification system using polling and status management.">
             Sistema de notificaciones en tiempo real
             mediante polling y control de estados.
         </p>
-                <span class="hint-click">
+                <span class="hint-click" data-es="Click para explorar imágenes" data-en="Click to explore images">
         Click para explorar imágenes
     </span>
         <div class="preview-images">
@@ -198,13 +217,14 @@
     <!-- CARD 3 -->
     <div class="card-feature">
 
-        <h3>Historial inteligente</h3>
+        <h3 data-es="Historial inteligente" data-en="Smart History">Historial inteligente</h3>
 
-        <p>
+        <p data-es="Registro detallado de acciones y trazabilidad
+            del sistema." data-en="Detailed activity tracking and system traceability.">
             Registro detallado de acciones y trazabilidad
             del sistema.
         </p>
-            <span class="hint-click">
+            <span class="hint-click" data-es="Click para explorar imágenes" data-en="Click to explore images">
         Click para explorar imágenes
     </span>
 
@@ -229,8 +249,8 @@
     <section class="tecnologias" id="tecnologias">
 
         <div class="titulo-seccion">
-            <span>Herramientas</span>
-            <h2>Tecnologías con las que trabajo</h2>
+            <span data-es="Herramientas" data-en="Tools">Herramientas</span>
+            <h2 data-es="Tecnologías con las que trabajo" data-en="Technologies I Work With">Tecnologías con las que trabajo</h2>
         </div>
 
         <div class="tech-grid">
@@ -247,6 +267,43 @@
 
     </section>
 
+    <!-- ================= EDUCACIÓN ================= -->
+
+<section class="educacion" id="educacion">
+
+    <div class="titulo-seccion">
+        <span data-es="Formación" data-en="Education">Formación</span>
+        <h2 data-es="Educación & crecimiento" data-en="Education & Growth">Educación & crecimiento</h2>
+    </div>
+
+    <div class="education-card">
+
+        <div class="education-icon">
+            🎓
+        </div>
+
+        <div class="education-content">
+
+            <h3 data-es="ADSO — Análisis y Desarrollo de Software" data-en="ADSO — Software Analysis and Development">ADSO — Análisis y Desarrollo de Software</h3>
+
+            <p class="education-place"data-es="Servicio Nacional de Aprendizaje SENA" data-en="SENA National Learning Service">
+                Servicio Nacional de Aprendizaje SENA
+            </p>
+
+            <p class="education-description"data-es="Formación enfocada en desarrollo web, bases de datos,
+                lógica de programación y construcción de soluciones
+                empresariales modernas orientadas a entornos reales." data-en="Training focused on web development, databases, programming logic, and building modern business-oriented software solutions for real-world environments.">
+                Formación enfocada en desarrollo web, bases de datos,
+                lógica de programación y construcción de soluciones
+                empresariales modernas orientadas a entornos reales.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
 
 
     <!-- ================= CONTACTO ================= -->
@@ -254,11 +311,12 @@
     <section class="contacto" id="contacto">
 
         <div class="titulo-seccion">
-            <span>Contacto</span>
-            <h2>Trabajemos juntos</h2>
+            <span data-es="Contacto" data-en="Contact">Contacto</span>
+            <h2 data-es="Trabajemos juntos" data-en="Let’s Work Together">Trabajemos juntos</h2>
         </div>
 
-        <p class="contacto-texto">
+        <p class="contacto-texto" data-es="Disponible para prácticas y oportunidades
+            relacionadas con desarrollo de software." data-en="Available for internships and opportunities related to software development.">
             Disponible para prácticas y oportunidades
             relacionadas con desarrollo de software.
         </p>
@@ -268,6 +326,7 @@
     <a
         href="mailto:tucorreo@gmail.com"
         class="btn-principal"
+        data-es="Contactarme" data-en="Contact Me"
     >
         Contactarme
     </a>
@@ -281,7 +340,7 @@
             readonly
         >
 
-        <button id="copyEmailBtn">
+        <button id="copyEmailBtn" data-es="Copiar" data-en="Copy">
             Copiar
         </button>
 
@@ -292,7 +351,8 @@
 
 <div class="contacto-extra">
 
-    <span>
+    <span data-es="También disponible vía WhatsApp:
+        +57 318 774 0219" data-en="Also available on WhatsApp: +57 318 774 0219">
         También disponible vía WhatsApp:
         +57 318 774 0219
     </span>
@@ -302,7 +362,7 @@
         target="_blank"
         class="whatsapp-link"
     >
-        <img src="assets/imagenes/WhatsApp.svg" class="whatsapp-link" alt="">Abrir chat
+        <img src="assets/imagenes/WhatsApp.svg" class="whatsapp-link" alt="" data-es="Abrir chat" data-en="Open Chat">Abrir chat
     </a>
 
 </div>
