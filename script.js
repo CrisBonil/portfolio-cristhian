@@ -458,9 +458,10 @@ cards.forEach(card => {
 });
 
 const toggleIdioma = document.getElementById("toggleIdioma");
+const btnCV = document.getElementById("btnCV");
+
 
 let idiomaActual = "es";
-
 toggleIdioma.addEventListener("click", () => {
 
     const elementos = document.querySelectorAll("[data-es]");
@@ -468,25 +469,27 @@ toggleIdioma.addEventListener("click", () => {
     if (idiomaActual === "es") {
 
         elementos.forEach(el => {
-
-            el.textContent = el.dataset.en;
-
+            el.innerHTML = el.dataset.en;
         });
 
-        idiomaActual = "English";
+        idiomaActual = "en";
 
         toggleIdioma.textContent = "Español";
+
+        btnCV.href = "assets/CristhianBonillaCVIngles.pdf";
+        btnCV.innerHTML = "📄 Download Resume";
 
     } else {
 
         elementos.forEach(el => {
-
-            el.textContent = el.dataset.es;
-
+            el.innerHTML = el.dataset.es;
         });
 
         idiomaActual = "es";
 
         toggleIdioma.textContent = "English";
+
+        btnCV.href = "assets/CristhianBonillaCV.pdf";
+        btnCV.innerHTML = "📄 Descargar CV";
     }
 });

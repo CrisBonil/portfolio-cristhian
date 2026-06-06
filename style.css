@@ -193,7 +193,7 @@ nav a:hover{
 
     align-items: center;
 
-    flex-wrap: flex-start;
+    flex-wrap: nowrap;
 }
 
 
@@ -210,7 +210,7 @@ nav a:hover{
 
     border:none;
 
-    padding:16px 28px;
+    padding:14px 28px;
 
     border-radius:14px;
 
@@ -693,7 +693,7 @@ section{
 .hero-botones a {
 
     text-decoration: none;
-        display: flex;
+        display: inline-flex;
 
     align-items: center;
 
@@ -1626,9 +1626,8 @@ section{
 
     gap: 12px;
 
-    margin-top: 25px;
 
-    padding: 15px 24px;
+    padding: 5px 24px;
 
     border-radius: 18px;
 
@@ -1655,7 +1654,7 @@ section{
 
     border: none;
 
-    padding: 16px 28px;
+    padding: 10px 20px;
 
     border-radius: 14px;
 
@@ -1671,8 +1670,7 @@ section{
 
     justify-content: center;
 
-    gap: 10px;
-
+    
     text-decoration: none;
 
     background: linear-gradient(
@@ -1692,12 +1690,12 @@ section{
 }
 
 .hero-botones .btn-principal,
-.hero-botones .btn-secundario,
-.hero-botones .btn-cv,
+.hero-botones .btn-secundario, 
 .hero-botones  {
 
     padding: 14px 20px;
-    align-items: baseline;
+    align-items: center;
+
 }
 
 .toggle-idioma {
@@ -1802,7 +1800,8 @@ background: linear-gradient(
     }
 }
 
-.hero-botones {
+.hero-botones,
+.btn-cv{
 
     justify-content: center;
 
@@ -1814,14 +1813,15 @@ background: linear-gradient(
 
 .btn-principal,
 .btn-secundario,
-.btn-cv,
-.toggle-idioma {
+.btn-cv {
 
     width: 100%;
 
-    max-width: 260px;
+    max-width: 320px;
 
     justify-content: center;
+
+    white-space: nowrap;
 }
 
 
